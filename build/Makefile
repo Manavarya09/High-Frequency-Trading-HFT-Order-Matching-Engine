@@ -129,6 +129,80 @@ hft_engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/build
 .PHONY : hft_engine/fast
 
+#=============================================================================
+# Target rules for targets named hft_client
+
+# Build rule for target.
+hft_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hft_client
+.PHONY : hft_client
+
+# fast build rule for target.
+hft_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/build
+.PHONY : hft_client/fast
+
+#=============================================================================
+# Target rules for targets named hft_benchmark
+
+# Build rule for target.
+hft_benchmark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hft_benchmark
+.PHONY : hft_benchmark
+
+# fast build rule for target.
+hft_benchmark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/build
+.PHONY : hft_benchmark/fast
+
+benchmark/Benchmark.o: benchmark/Benchmark.cpp.o
+.PHONY : benchmark/Benchmark.o
+
+# target to build an object file
+benchmark/Benchmark.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/benchmark/Benchmark.cpp.o
+.PHONY : benchmark/Benchmark.cpp.o
+
+benchmark/Benchmark.i: benchmark/Benchmark.cpp.i
+.PHONY : benchmark/Benchmark.i
+
+# target to preprocess a source file
+benchmark/Benchmark.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/benchmark/Benchmark.cpp.i
+.PHONY : benchmark/Benchmark.cpp.i
+
+benchmark/Benchmark.s: benchmark/Benchmark.cpp.s
+.PHONY : benchmark/Benchmark.s
+
+# target to generate assembly for a file
+benchmark/Benchmark.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/benchmark/Benchmark.cpp.s
+.PHONY : benchmark/Benchmark.cpp.s
+
+client/Client.o: client/Client.cpp.o
+.PHONY : client/Client.o
+
+# target to build an object file
+client/Client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/client/Client.cpp.o
+.PHONY : client/Client.cpp.o
+
+client/Client.i: client/Client.cpp.i
+.PHONY : client/Client.i
+
+# target to preprocess a source file
+client/Client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/client/Client.cpp.i
+.PHONY : client/Client.cpp.i
+
+client/Client.s: client/Client.cpp.s
+.PHONY : client/Client.s
+
+# target to generate assembly for a file
+client/Client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/client/Client.cpp.s
+.PHONY : client/Client.cpp.s
+
 src/Main.o: src/Main.cpp.o
 .PHONY : src/Main.o
 
@@ -159,6 +233,7 @@ src/MatchingEngine.o: src/MatchingEngine.cpp.o
 # target to build an object file
 src/MatchingEngine.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/src/MatchingEngine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/src/MatchingEngine.cpp.o
 .PHONY : src/MatchingEngine.cpp.o
 
 src/MatchingEngine.i: src/MatchingEngine.cpp.i
@@ -167,6 +242,7 @@ src/MatchingEngine.i: src/MatchingEngine.cpp.i
 # target to preprocess a source file
 src/MatchingEngine.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/src/MatchingEngine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/src/MatchingEngine.cpp.i
 .PHONY : src/MatchingEngine.cpp.i
 
 src/MatchingEngine.s: src/MatchingEngine.cpp.s
@@ -175,6 +251,7 @@ src/MatchingEngine.s: src/MatchingEngine.cpp.s
 # target to generate assembly for a file
 src/MatchingEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/src/MatchingEngine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/src/MatchingEngine.cpp.s
 .PHONY : src/MatchingEngine.cpp.s
 
 src/OrderBook.o: src/OrderBook.cpp.o
@@ -183,6 +260,7 @@ src/OrderBook.o: src/OrderBook.cpp.o
 # target to build an object file
 src/OrderBook.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/src/OrderBook.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/src/OrderBook.cpp.o
 .PHONY : src/OrderBook.cpp.o
 
 src/OrderBook.i: src/OrderBook.cpp.i
@@ -191,6 +269,7 @@ src/OrderBook.i: src/OrderBook.cpp.i
 # target to preprocess a source file
 src/OrderBook.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/src/OrderBook.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/src/OrderBook.cpp.i
 .PHONY : src/OrderBook.cpp.i
 
 src/OrderBook.s: src/OrderBook.cpp.s
@@ -199,6 +278,7 @@ src/OrderBook.s: src/OrderBook.cpp.s
 # target to generate assembly for a file
 src/OrderBook.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/src/OrderBook.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/src/OrderBook.cpp.s
 .PHONY : src/OrderBook.cpp.s
 
 # Help Target
@@ -209,7 +289,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... hft_benchmark"
+	@echo "... hft_client"
 	@echo "... hft_engine"
+	@echo "... benchmark/Benchmark.o"
+	@echo "... benchmark/Benchmark.i"
+	@echo "... benchmark/Benchmark.s"
+	@echo "... client/Client.o"
+	@echo "... client/Client.i"
+	@echo "... client/Client.s"
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"

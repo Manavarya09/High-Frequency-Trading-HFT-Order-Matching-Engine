@@ -12,4 +12,16 @@ add_executable(hft_engine
     src/MatchingEngine.cpp
 )
 
+add_executable(hft_client
+    client/Client.cpp
+)
+
+add_executable(hft_benchmark
+    benchmark/Benchmark.cpp
+    src/OrderBook.cpp
+    src/MatchingEngine.cpp
+)
+
 target_link_libraries(hft_engine pthread)
+target_link_libraries(hft_client)
+target_link_libraries(hft_benchmark pthread)

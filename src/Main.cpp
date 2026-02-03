@@ -2,6 +2,7 @@
 #include "Gateway.hpp"
 #include "MatchingEngine.hpp"
 #include "Logger.hpp"
+#include "Config.hpp"
 #include <iostream>
 #include <signal.h>
 #include <atomic>
@@ -15,7 +16,8 @@ void signalHandler(int signum) {
 int main() {
     signal(SIGINT, signalHandler);
 
-    RingBuffer<Order> orderQueue(1024);
+    Config config;
+    RingBuffer<Order> orderQueue(config.orderQueueSize);
     Logger logger;
 
     auto tradeCallback = [&logger](const Trade& trade) {
@@ -24,11 +26,11 @@ int main() {
 
     MatchingEngine engine(orderQueue, tradeCallback);
     Gateway gateway(orderQueue);
-    TCPServer server(8080, gateway);
+    TCPServer server(config.port, gateway);
 
     std::thread serverThread(&TCPServer::start, &server);
 
-    std::cout << "HFT Order Matching Engine started. Press Ctrl+C to stop." << std::endl;
+    std::cout << "HFT Order Matching Engine started on port " << config.port << ". Press Ctrl+C to stop." << std::endl;
 
     while (running) {
         std::this_thread::sleep_for(std::chrono::seconds(1));

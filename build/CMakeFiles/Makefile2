@@ -64,10 +64,14 @@ CMAKE_BINARY_DIR = "/Users/manavaryasingh/High-Frequency Trading (HFT) Order Mat
 
 # The main recursive "all" target.
 all: CMakeFiles/hft_engine.dir/all
+all: CMakeFiles/hft_client.dir/all
+all: CMakeFiles/hft_benchmark.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/hft_engine.dir/codegen
+codegen: CMakeFiles/hft_client.dir/codegen
+codegen: CMakeFiles/hft_benchmark.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +80,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/hft_engine.dir/clean
+clean: CMakeFiles/hft_client.dir/clean
+clean: CMakeFiles/hft_benchmark.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,7 +91,7 @@ clean: CMakeFiles/hft_engine.dir/clean
 CMakeFiles/hft_engine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=1,2,3,4 "Built target hft_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=7,8,9,10 "Built target hft_engine"
 .PHONY : CMakeFiles/hft_engine.dir/all
 
 # Build rule for subdir invocation for target.
@@ -102,13 +108,77 @@ hft_engine: CMakeFiles/hft_engine.dir/rule
 # codegen rule for target.
 CMakeFiles/hft_engine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=1,2,3,4 "Finished codegen for target hft_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=7,8,9,10 "Finished codegen for target hft_engine"
 .PHONY : CMakeFiles/hft_engine.dir/codegen
 
 # clean rule for target.
 CMakeFiles/hft_engine.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_engine.dir/build.make CMakeFiles/hft_engine.dir/clean
 .PHONY : CMakeFiles/hft_engine.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/hft_client.dir
+
+# All Build rule for target.
+CMakeFiles/hft_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=5,6 "Built target hft_client"
+.PHONY : CMakeFiles/hft_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/hft_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hft_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" 0
+.PHONY : CMakeFiles/hft_client.dir/rule
+
+# Convenience name for target.
+hft_client: CMakeFiles/hft_client.dir/rule
+.PHONY : hft_client
+
+# codegen rule for target.
+CMakeFiles/hft_client.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=5,6 "Finished codegen for target hft_client"
+.PHONY : CMakeFiles/hft_client.dir/codegen
+
+# clean rule for target.
+CMakeFiles/hft_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_client.dir/build.make CMakeFiles/hft_client.dir/clean
+.PHONY : CMakeFiles/hft_client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/hft_benchmark.dir
+
+# All Build rule for target.
+CMakeFiles/hft_benchmark.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=1,2,3,4 "Built target hft_benchmark"
+.PHONY : CMakeFiles/hft_benchmark.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/hft_benchmark.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hft_benchmark.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" 0
+.PHONY : CMakeFiles/hft_benchmark.dir/rule
+
+# Convenience name for target.
+hft_benchmark: CMakeFiles/hft_benchmark.dir/rule
+.PHONY : hft_benchmark
+
+# codegen rule for target.
+CMakeFiles/hft_benchmark.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles" --progress-num=1,2,3,4 "Finished codegen for target hft_benchmark"
+.PHONY : CMakeFiles/hft_benchmark.dir/codegen
+
+# clean rule for target.
+CMakeFiles/hft_benchmark.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hft_benchmark.dir/build.make CMakeFiles/hft_benchmark.dir/clean
+.PHONY : CMakeFiles/hft_benchmark.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

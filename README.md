@@ -1,23 +1,23 @@
 # High-Frequency-Trading-HFT-Order-Matching-Engine
 
-A simplified High-Frequency Trading (HFT) Order Matching Engine implemented in C++.
+A comprehensive High-Frequency Trading (HFT) Order Matching Engine implemented in modern C++.
+
+## Features
+
+- **Price-Time Priority Matching**: FIFO within price levels.
+- **Lock-Free Communication**: Custom RingBuffer for inter-thread messaging.
+- **Asynchronous Logging**: Non-blocking trade logging to disk.
+- **TCP Server**: Accepts FIX-like order messages.
+- **Client Simulator**: Test client for sending orders.
+- **Benchmarking**: Performance measurement tools.
+- **Configurable**: Runtime configuration via Config struct.
 
 ## Architecture
 
-- **Gateway**: Parses FIX-like messages from TCP clients into Order objects.
-- **Matching Engine**: Processes orders using Price-Time Priority (FIFO), matches bids >= asks.
-- **Logger**: Asynchronously logs trades to disk.
-- **Ring Buffer**: Lock-free queue for inter-thread communication.
-
-## Components
-
-- `Order`: Represents a buy/sell order.
-- `OrderBook`: Maintains bid/ask levels using std::map and std::deque.
-- `MatchingEngine`: Core matching logic.
-- `RingBuffer`: Lock-free SPSC queue.
-- `Gateway`: Message parser.
-- `Logger`: Async trade logger.
-- `TCPServer`: TCP server for client connections.
+- **Gateway**: Parses TCP messages into Orders, queues via RingBuffer.
+- **MatchingEngine**: Dedicated thread processes orders, matches bids >= asks.
+- **Logger**: Async thread logs trades.
+- **TCPServer**: Handles client connections.
 
 ## Build
 
@@ -28,20 +28,41 @@ cmake ..
 make
 ```
 
+Executables: `hft_engine`, `hft_client`, `hft_benchmark`
+
 ## Run
 
+Server:
 ```bash
 ./build/hft_engine
 ```
 
-Send orders via TCP on port 8080, format: `ORDER|id|symbol|side|price|quantity`
+Client:
+```bash
+./build/hft_client
+```
 
-Example: `ORDER|1|AAPL|B|10000|100`
+Benchmark:
+```bash
+./build/hft_benchmark
+```
 
-Trades logged to `trades.log`.
+## Message Format
+
+`ORDER|id|symbol|side|price|quantity`
+
+Side: B (Buy), S (Sell)
 
 ## Latency Optimizations
 
-- Lock-free Ring Buffer for order queue.
-- Minimal heap allocations in hot path.
-- Separate threads for matching and logging.
+- Lock-free SPSC RingBuffer.
+- Minimal allocations in hot path.
+- Separate threads for I/O, matching, logging.
+- High-resolution timing.
+
+## Project Structure
+
+- `src/`: Core engine code.
+- `client/`: Test client.
+- `benchmark/`: Performance tests.
+- `tests/`: Unit tests (placeholder).

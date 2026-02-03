@@ -1,3 +1,5 @@
 /Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles/hft_engine.dir
+/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles/hft_client.dir
+/Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles/hft_benchmark.dir
 /Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles/edit_cache.dir
 /Users/manavaryasingh/High-Frequency Trading (HFT) Order Matching Engine/build/CMakeFiles/rebuild_cache.dir
